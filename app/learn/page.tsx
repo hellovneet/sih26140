@@ -1,0 +1,4 @@
+import AppShell from "@/components/layout/AppShell";
+import Topbar from "@/components/layout/Topbar";
+const modules=["Qubits & States","Quantum Gates","Superposition","Entanglement","Quantum Teleportation","Grover's Algorithm"];
+export default function Learn(){return <AppShell><Topbar title="Learn Quantum Computing"/><div className="grid gap-5 md:grid-cols-3">{modules.map((m,i)=><div className="glass p-5" key={m}><span className="text-xs muted">MODULE {String(i+1).padStart(2,"0")}</span><div className="mt-5 text-3xl">⚛️</div><h2 className="mt-4 font-bold">{m}</h2><p className="mt-2 text-sm muted">Interactive lesson • Visual explanation</p></div>)}</div></AppShell>}
